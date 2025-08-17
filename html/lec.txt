@@ -1,0 +1,77 @@
+==> HTML : Hyper text Markup language ==> structure of site 
+
+editor ==> VS COde 
+
+index.html  ==> host 
+
+tags ==> <>  
+===> open closing tag <tagName> content </tagName> || self closing tag <tagName> 
+<p>Content</p>
+
+
+<html>   
+<head>
+setting 
+
+
+** meta tag ===> tag : SEO ===> Search Engine opetimization 
+// description 
+// lagnuage 
+// code ==> ASCI ==>0,1 ===>
+
+<meta name="description" content="Day1 html">
+
+
+ </head>
+<body>   </body>
+</html>
+
+
+version ===> 5 
+
+html:5 ===> structure 
+!===> structure
+
+extesion  ==> live server 
+
+comment ==> <!-- comment  --> || ctrl+? || ctrl+ظ
+
+/**
+comment ==> team || use code  ==>documentation
+
+code ==> doesn't appear to user 
+
+*/
+
+
+<!-- header  ==> <h1> Content </h1> ==> openning closing tag 
+ 
+h1 == h6   ===>   Main headr
+
+<p> 
+    h2
+<p> h3 </p>    
+</p>
+
+-->
+
+
+tag ==> attributes===>
+public attributes ===> tags ==> width , height , name , id , class
+speceific attributes ==> attribute specially for element 
+ img ==> src    alt 
+ link ==>  
+ list => 
+ form ==> send data ===> action => "step"  post=
+
+
+ form ==> submit ==> sendrequest => send data   (method : post)|| get data (method:get)
+get ==> send (url)
+post (decode data )
+
+
+table ==> thead===> headers of columns |||tbody==> values 
+
+
+colspan ==> 
+
