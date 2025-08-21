@@ -1,0 +1,199 @@
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+:root{
+     --main-color:#00f;
+     --secondary-color:rgb(255, 0, 179);
+     --main-font:'sans-serif';
+}
+html{
+     font-size: 20px;
+}
+.clear{
+    clear: both;
+}
+@font-face {
+    font-family: "custom-font"; 
+    /* web open font format: "woff" ||  TFF ; OTF*/
+    src: url("fonts/Anton-Regular.ttf");
+    /* src: url("fonts/Anton-Regular.ttf"),format('woff'); */
+    /* src: url("fonts/Anton-Regular.ttf"),format('woff2'); */
+    
+}
+
+
+div.parent{
+    font-size: 10px;
+}
+
+
+/* Selector Specificity: (0, 0, 1) */
+h1{
+    /* color:blueviolet; */
+    /* color:rgba(215, 73, 26, 0.531); */
+    /* color:#273f4fc8; */
+    color:var(--main-color);
+  
+    text-align: center;
+    font-size: 3em;
+    /* font-family: 'custom-font',sans-serif; */
+    font-family: var(--main-font);
+    /* font-family: "Anton", sans-serif; */
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-style: italic;
+
+}
+/* Selector Specificity: (0, 1, 0) */
+.text{
+    line-height: 35px;
+    color:rgb(202, 88, 7);
+    font-weight: bold;
+    font-style: italic;
+    text-transform: capitalize;
+    text-shadow: 1px 0px rgba(30, 10, 12, 0.391);
+    background-color: rgba(210, 210, 219, 0.574);
+    text-decoration: underline dotted overline line-through  dashed none;
+    border:1px solid red;
+    /* padding:10px; */
+    /* padding : 10px 15px 20px 13px; */
+    padding : 10px 15px;
+    /* padding : 10px 0px 30px 2px; */
+    margin: 10px;
+    width:500px;
+    box-sizing: border-box;
+    display: inline-block;
+
+}
+
+/* Selector Specificity: (0, 0, 2) */
+p a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+
+
+
+
+
+ div.container{
+ width: 200px;
+    height: 200px;
+    background-color: rgb(126, 188, 243);
+    border-radius: 50%;
+    margin: 10px;
+    border: 1px solid blue;
+    display: inline-block;
+ }
+ nav{
+    /* position: fixed; */
+    /* position: sticky;
+    top: 10px; */
+    background-color: blanchedalmond;
+    width: 100%;
+ }
+nav
+ ul{
+
+    /* display: inline-block; */
+ 
+    width: 70%;
+    margin: 10px;
+      text-align: center;
+        /* background-color: rgb(210, 210, 219); */
+}
+/* a{
+       margin: 10px;
+    width: 20%;
+    background-color: rgba(176, 173, 173, 0.754);
+    display: inline-block;
+    text-decoration: none;
+} */
+ nav ul li{
+    
+    display: inline-block;
+    margin: 10px;
+    /* background-color: #00f; */
+  
+ }
+
+ li#left{
+    float: left;
+ }
+li.right{
+    float: right;
+ }
+
+p{
+    /* background-color: red; */
+}
+body{
+    background-color: rgb(81, 14, 3);
+    height: 100000px;
+}
+.first ,.second ,.third ,.fourth{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    /* position: absolute; */
+}
+div.parent-div{
+  background-color: rgb(133, 133, 151);
+  padding: 10px;
+  /* position: relative; */
+  height: 400px;
+
+}
+div.first{
+background-color: #00f;
+right:3px;
+top:17px;
+z-index: 10;
+
+
+}
+
+div.second{
+background-color: #0f0;
+/* position: relative; */
+/* bottom:15px; */
+
+/* position:absolute; */
+/* bottom:0;
+right:3px;
+top:0; */
+
+/* position: fixed; 
+right:3px;
+top:0px; */
+
+/* position: sticky;
+right:3px;
+top:0px;  */
+/* right:3px;
+top:22px;
+z-index: 15; */
+}
+
+div.third{
+background-color: #ff0;
+/* right:3px;
+top:27px;
+z-index: 11; */
+
+}
+
+.parent-div{
+ /* background-image: url('./imgs/sm-bg.webp'); */
+ background-image: url('./imgs/bg.jpg');
+ background-repeat: no-repeat;
+ /* background-size: 100% 100%; */
+  background-size: cover; 
+ /* background-size: contain; */
+ background-position: left;
+}

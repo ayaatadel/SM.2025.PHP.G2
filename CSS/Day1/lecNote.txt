@@ -1,0 +1,205 @@
+css========> cascading style sheet 
+===> HTML ==> Structure
+====>CSS  ===> Style 
+
+===> inline ==> tag 
+===> internal ==><style> </style>
+===> external  ==> file.css===> html(link)
+
+
+ /**
+ * selectors =========> select element from html in css
+ * glooobal selector ===> *
+ * rootselsector ==> html || :root
+ *  simple selector : tag name (p)==> all elements that has same tag || id => #idName || class ==> .className
+
+ * parent child ==> child  ***** > parentName childName
+
+ * div.all ==> div that has class "all"
+ * div .all ==> all children in div that has class "all"
+
+
+ ================> CSS periority
+ style===> inline > (internal > external)==> order
+============> css specificity
+inline style ==> specificity ==> 1000
+id ==> specificity ==> Selector Specificity: (1, 0, 0)
+
+class ==> specificity ==> Selector Specificity: (0, 1, 0)
+tag ==> specificity ==> Selector Specificity: (0, 0, 1)
+ */
+
+ /* #pg{
+    color: brown;
+    background-color: rgba(210, 210, 219, 0.572);
+ }
+
+ /* Selector Specificity: (0, 1, 1)==> tag (1) class(10) */
+ /* p.test{
+    color: blue;
+    background-color: rgba(210, 210, 219, 0.572);
+ } */
+
+ /* div.all{
+    color: red;
+ } */
+
+ /* div p{
+    color: green;
+    background-color: rgba(210, 210, 219, 0.572);
+ }  */
+
+
+/* color */
+/**
+ *  color:red
+ *  color :(red , green ,blue)
+ * 0-255 ==> rgb(0, 0, 0) ==> black || rgb(255,255,255) ==> white
+ *  color :(red , green ,blue)
+ *  color :(255, 0 ,255)
+ *  color :(0, 0 ,255)  ==> blue
+ *  color :(0,255,0)  ==> green
+ *  color :(255,0,0)  ==> red
+ * ====================> 0-f 
+ *          red green blue
+ *  color :#000000==> #000 ==> black
+ *  color :#ffffff===> #fff ==> white
+ *  color :#0000ff==> #00f ==> blue
+ *  color :#ff0000==> #f00 ==> red
+ *  color :#00ff00==> #0f0 ==> green
+ * ==================> rgba ===> rgba(255, 0, 0, 0.5)
+ * a==> alpha  (0-1)
+ */
+'
+
+
+
+   /*border-width:1px ;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: blue;
+    width:100px;
+    height: 200px;
+    background-color: rgb(126, 188, 243);
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+    */
+
+
+    
+ /**
+ * css variables   ==> root element  (html || :root)
+ * 1. Define the variable  ==> --variable-name: value;
+ * 2. Use the variable  ==> var(--variable-name);
+ */
+
+
+
+ =============================
+  /**
+ BOX Model ===> Element is Box 
+====> width , height 
+ 1. Content  ==>  text
+ 2. Padding  ==> space between content and border
+ ===> padding : top right bottom left
+ ===> padding : 10px ==> all sides padding 10px(t,r,b,l)
+ ===> padding-top : 10px;
+ ===> padding-right : 10px;
+ ===> padding-bottom : 10px;
+ ===> padding-left : 10px;
+ ===> padding : 10px 15px 20px 13px
+ ===> padding : 10px 15px ; ==> top , bottom => 10 || right ,left ==> 15px
+ *****************************************
+ 3. Border  ==> border around the element
+ ********************************************
+ 4. Margin  ==> space between element and other elements
+ ===> margin : top right bottom left
+ ===> margin : 10px ==> all sides margin 10px(t,r,b,l)
+ ===> margin-top : 10px;
+ ===> margin-right : 10px;
+ ===> margin-bottom : 10px;
+ ===> margin-left : 10px;
+ ===> margin : 10px 15px 20px 13px
+ ===> margin : 10px 15px ; ==> top , bottom => 10 || right ,left ==> 15px
+ */
+
+ /** 
+ ===> Element is BOX ===> Width , Height
+  width:500px;== 531=> content + padding(right+left)+border
+  height:500px;== 531=> content + padding(top+bottom)+border
+ box-sizing: border-box;==>width(content + padding + border)
+ box-sizing: border-box;==>height(content + padding + border)
+ Total Width= Width
+ box-sizing: border-box;==>(content + padding + border)
+ Total Width= Width
+ Total height= height
+ box-sizing: content-box;==> width (content only)
+ box-sizing: content-box;==> height (content only)
+ Total Width ===> content + padding + border
+ Total Height ===> content + padding + border
+ */
+
+
+ /**
+ px : pixel
+ 1px = 1/96th of an inch
+ 100% ===> parent element's width
+ 1em  ==> 16px 
+ 1rem ===>  root element
+ */
+
+
+ /*
+ display : block  ==> width (100%)
+ -- padding , margine
+ display : inline ==> width (content)
+ -- padding , 
+ display:inline-block
+ width : content
+ accept : padding , margine
+ =====================>
+ *** block element *****
+ div , p , ul , li , h1-h6 , form 
+***** inline  ****
+ a , span 
+
+ */
+
+
+ /*
+ float :  left , right ==>
+ clear:both
+ 
+ */
+
+ position {
+    defult ==> static 
+    body ==> default position (relative)
+    =====================>
+    relative   ==> move (place in html)
+   *** top : 10 ابعد عن ال top : 10px
+   وكذلك مع باقي الاتجاهات 
+   ************************************>
+    absolute  ==> 
+/**
+element that take position :absolute 
+--- parent : take any position except static
+---> move will be according to parent 
+---------------->
+parent of elemnt take position static
+--------> move will be according to first parent that take any position except static 
+*/
+
+***************************************
+
+    fixed  :   over flow of pag ==> fixed 
+    width : content ==> take width
+    *******************************
+    sticky : fixed ==> parent still exist
+    hidden ==> parent is hidden
+
+    ===============>
+    z-index: order of elemnts
+ }
