@@ -1,0 +1,102 @@
+===========> Css sudo classses : hover 
+===> margine collbase 
+=============> Flex
+=========> Transition 
+=====> animation 
+===================================> Demo 
+
+
+
+
+****************************
+parent :  section : display:flex ==> child (same line)
+dispaly:flex
+
+ |      | 
+ flex-direction:row
+justify-content :   x axios
+- space-between
+- space-around
+- flex-start 
+- flex-end
+- center (الافقي)
+align-items:  y axios   (المسافه مابين العناصر ع المستوي الراسي )
+- center (الراسي)
+- flex-start
+- flex-end 
+================================
+ flex-direction:column
+justify-content     ===> y
+align-items     ===> x
+
+
+align-content:  (المسافه ما بين السطور وبعضها)
+
+flex-wrap : no-wrap (لو العناصر زادت ع العرض المطلوب دا كدا معناه ان العناصرهتنكمش ع بعضها بحيث كلهم يكونو ع تفس السطر)
+
+flex-wrap : wrap : لو العناصر زادت عن العرض فكدا هتتوزع ع باقي rows
+
+
+===============>
+flex-flow : column wrap
+flex-direction 
+flex-wrap
+
+
+
+==================> chlid 
+order :  default (0)
+flex-shrink 
+flex-grow 
+align-self:
+
+============================
+
+over-flow:hidden====>
+============================
+display:none ==> don't save place 
+visibility:hidden  ==> save 
+opacity:0  ===> save place (0-1)
+
+=======================>
+transition
+transition-delay  : 2s
+transition-duration :1s
+transition-property : all 
+transition-timing-function :
+
+
+ease : specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+linear : specifies a transition effect with the same speed from start to end
+ease-in : specifies a transition effect with a slow start
+ease-out : specifies a transition effect with a slow end
+ease-in-out : specifies a transition effect with a slow start and end
+==============================>
+animation 
+
+@keyframes ani_name {
+    from{}
+    to{}
+}
+@keyframes ani_name {
+    0%{}
+    100%{}
+}
+
+element{
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 4s;
+  animation-direction: reverse;
+  animation-timing-function:ease;
+  animation-iteration-count:1 || infinite
+}
+        - y
+        -
+        -      ()
+        -
+-------  ---------- x
+        -
+        -
+        -
+        -

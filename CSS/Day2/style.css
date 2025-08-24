@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: 1s all ease-in-out;
+    transition-delay: 1s;
+    transition-duration: 3s;
+    -webkit-transition: 1s all ease-in-out;
+    -moz-transition: 1s all ease-in-out;
+    -ms-transition: 1s all ease-in-out;
+    -o-transition: 1s all ease-in-out;
+}
+
+#text {
+    background-color: black;
+    height: 100px;
+    color: blue;
+    /* display: inline-block; */
+    border: 1px solid gray;
+    /* width:30%; */
+    /* margin:30px auto; */
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 5px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    order: 1;
+    overflow: hidden;
+}
+
+.container {
+    height: 500px;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex-direction: column-reverse; */
+    /* row   الافقي*/
+    justify-content: space-around;
+    /* column   الراسي*/
+    /* align-items: center; */
+    flex-wrap: wrap;
+
+}
+
+#text:hover {
+    color: brown;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+p span {
+    color: saddlebrown;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+/* .test{
+    align-self: flex-end;
+} */
+.test {
+    /* order:0
+     */
+    /* opacity:1
+      */
+    /* display: none;
+       */
+    /* visibility: hidden; */
+    /* display: none; */
+}
+
+/* .container:hover {
+.test{
+   display: none;
+}
+span{
+    color:blue
+}
+} */
+
+
+section.anim {
+    height: 300px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+h2 {
+    background-color: #000000;
+    color: white;
+}
+
+.anim:hover {
+    h2 {
+        background-color: darkcyan;
+        color: white;
+        font-size: 40px;
+        padding: 20px;
+        width: 400px;
+        /* transition: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s; */
+        /* transition-delay: 1s; */
+
+    }
+}
+
+section.animate {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background-color: lightcoral;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    animation-name: move;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    border-radius: 10px;
+    /* animation-iteration-count: 3; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes move {
+    /* from{
+    }
+    to{
+    } */
+
+    0% {
+       height: 20px;
+       width: 20px;
+       transform: scale(2,2);
+       transform:rotate(45deg);
+       rtransform: translate(0,100px);
+       -webkit-transform:rotate(45deg);
+       -moz-transform:rotate(45deg);
+       -ms-transform:rotate(45deg);
+       -o-transform:rotate(45deg);
+}
+
+    30% {
+          height: 40px;
+          width: 40px;
+          transform: translate(100px,100px);
+          transform:rotate(90deg);
+          -webkit-transform:rotate(90deg);
+          -moz-transform:rotate(90deg);
+          -ms-transform:rotate(90deg);
+          -o-transform:rotate(90deg);
+}
+
+    60% {
+         height: 60px;
+         width: 60px;
+         transform: translate(100px,0);
+         -webkit-transform:rotate(270deg);
+         -moz-transform:rotate(270deg);
+         -ms-transform:rotate(270deg);
+         -o-transform:rotate(270deg);
+         transform:rotate(270deg);
+}
+
+    100% {
+        height: 100px;
+        width: 100px;
+        transform: translate(0,0);
+        transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+}
+}
+
+h3{
+    text-align: center;
+    font-size: 24px;
+    color: darkcyan;
+   
+}
+
+h3:hover{
+     transform: rotateY(-180deg);
+     -webkit-transform: rotateY(-180deg);
+     -moz-transform: rotateY(-180deg);
+     -ms-transform: rotateY(-180deg);
+     -o-transform: rotateY(-180deg);
+}
