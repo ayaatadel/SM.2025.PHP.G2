@@ -1,0 +1,47 @@
+===========> how js engine deal with function 
+
+1- create global execution context 
+2- create global object (window)  // 
+3- create specif variable (this)==> point (window)  // 
+4- allocate in memory vriables ==> var  ==> default undefined
+5- hoisting for functions
+
+
+====> local sope & global scope  
+  ============> local scope (block || scope) ex: function {}
+  === global scope ==> variable ==> global 
+
+
+  /***
+  local variable make change on global variable ==> shadwing
+  ***/
+
+
+
+
+
+
+/***
+
+great ==> undefined
+
+great (
+
+trackname = un ==> php
+
+
+
+
+
+)
+==== welcome php hello undefined
+
+
+
+
+
+
+
+
+==> object
+==> Math object

@@ -1,0 +1,5 @@
+====> Functions 
+===> hoisting 
+===> var , let , const
+===> string api (methods)
+===> array methods (api)  // slice , splice ===> 
