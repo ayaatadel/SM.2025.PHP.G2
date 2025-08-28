@@ -1,0 +1,12 @@
+===> DOM   ==> Document object model 
+-->  select element  ==> document
+--> change coneten of element
+--> change style of element
+--> create element 
+===> Event
+
+
+/**
+prevent default ===> search 
+with code 
+**/
