@@ -1,0 +1,51 @@
+============> Object ==> assign || keys || values
+========> array ==> foreach || map || filter 
+
+
+/**
+array
+map 
+filter 
+for in
+for of
+for each
+reduce======= 
+find  =========
+find one =====
+every
+*/
+
+
+==> for in , for of ==> array & object 
+==> for in  ==>  object 
+
+/**
+var 
+let 
+const 
+*/
+
+===========> BOM  
+
+=============> AJAX ==>Asynchronous JavaScript And XML.
+status  : request
+1 : uninitialized
+2: loading
+3: interactive
+4: completed
+=====================
+status : response
+100 :  information
+200: success
+300:redirect
+400: client error
+500: server error
+====>
+send request ===> form ==>  (url ==> method)
+get data  : get
+post data  : post
+updata data  :update || put
+delete data  : delete
+
+
+

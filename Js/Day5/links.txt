@@ -1,0 +1,6 @@
+https://www.geeksforgeeks.org/javascript/javascript-localstorage/ 
+
+///=============> fake api (products)  ==>https://dummyjson.com/docs/products
+
+
+https://www.geeksforgeeks.org/javascript/javascript-cookies/
