@@ -4,3 +4,9 @@ https://www.geeksforgeeks.org/javascript/javascript-localstorage/
 
 
 https://www.geeksforgeeks.org/javascript/javascript-cookies/
+
+
+=============>https://ayaatadel.github.io/restaurant/index.html
+/*
+dead line ==> 6/9 ==> 12 am
+*/
