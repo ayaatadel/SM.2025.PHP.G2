@@ -1,0 +1,8 @@
+=======> Functions and type of Functions
+===> OOP and its priniciples
+
+// trait   ==> search
+--> can we inhirit 
+---> hypried inhertinace
+--> multible inheritance
+--> composition 
