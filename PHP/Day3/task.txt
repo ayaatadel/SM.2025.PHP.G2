@@ -1,0 +1,15 @@
+/**
+ * registeration steps
+ * email : check if email correct || exist in data.json  
+ * if email repeat ==> error ==> email already exist
+ * if email not exist ==> store data in data.json
+ */
+
+
+ /**
+ login ==>
+ check email , password are in data.json
+ if exist ===> redirect user on profile ==> show all user data
+   // check if email and password are correct 
+    // go page ==> profile.php ==>  username , email , image
+ if not exist ==> error message ==> check email or password
