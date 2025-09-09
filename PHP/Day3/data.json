@@ -1,1 +1,14 @@
-[{"name":"ayaat","email":"mdnms@gmail.com","password":"ayaat","image":"1757408800.jpeg"}]
+[
+  {
+    "name": "ayaat",
+    "email": "ayaat@gmail.com",
+    "password": "ayaat",
+    "image": "1757408800.jpeg"
+  },
+  {
+    "name": "nada",
+    "email": "nada@gmail.com",
+    "password": "ayaat",
+    "image": "1757411639.jpeg"
+  }
+]

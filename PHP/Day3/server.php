@@ -125,9 +125,27 @@ if(isset($_POST['btn-login']))
 {
      $email = $_POST['userEmail'];
     $password = $_POST['userPassword']; 
-    
-    
-}
 
+    if(!file_exists("data.json")){
+        // file_put_contents("data.json","[]");
+        header("Location: login.php?error=no_users_found");
+        exit();
+    }else{
+        $currentUsers=file_get_contents("data.json");
+        $decodedData=json_decode($currentUsers,true);
+        foreach ($decodedData as $key => $value) {
+          
+            if($value['email'] === $email && $value['password'] === $password){
+                // login successful
+                header("Location: profile.php?name=".$value['name']."&email=".$value['email']."&image=".$value['image']);
+                exit();
+            }else{
+                // login failed
+                header("Location: login.php?error=invalid email or password");
+                exit();
+            }
+        }
+    }
+}
 
 ?>
