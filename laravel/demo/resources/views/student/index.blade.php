@@ -13,8 +13,16 @@
 </head>
 
 <body>
-    <h1 class="text-info text-center m-5  ">All Studenta Data</h1>
+ <div class="d-flex justify-content-around">
+       <h1 class="text-success text-center m-5  ">All Studenta Data</h1>
     {{-- @dump($students) --}}
+
+    <div class="m-5">
+            <a class="text-decoration-none" href="{{ route('students.create' ) }}">
+               <button class="btn btn-info">Create New Student</button></a>
+
+    </div>
+ </div>
     <table class="table table-bordered w-75 m-auto p-1 text-center">
         <thead>
 
@@ -35,15 +43,22 @@
     <td>{{ $student->name }}</td>
     <td>{{ $student->email}}</td>
     <td>{{ $student->gender }}</td>
-      <td class="p-2">
-             <a class="text-decoration-none" href="{{ route('students.show',$student->id ) }}">
+      <td class="p-2 d-flex justify-content-around">
+          <div>
+               <a class="text-decoration-none" href="{{ route('students.show',$student->id ) }}">
                <button class="btn btn-warning">View</button></a>
 
+          </div>
                <form action="{{ route('students.destroy',$student->id ) }}" method="post">
                  @method('delete')
                  @csrf
                  <button class="btn btn-danger">Delete</button>
                </form>
+<div>
+
+                 <a class="text-decoration-none" href="{{ route('students.update',$student->id ) }}">
+               <button class="btn btn-info">Update</button></a>
+</div>
             </td>
 </tr>
 

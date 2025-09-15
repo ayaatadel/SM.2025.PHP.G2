@@ -54,4 +54,42 @@ class StudentController extends Controller
     return to_route('students.index');
 
     }
+
+    function create()
+    {
+        return view('student.create');
+    }
+
+    function store()
+    {
+
+        // dump($_REQUEST);
+        // dump(request()->all());
+        $requestedData=request()->except('_token');
+        // dump($requestedData);
+        Student::create($requestedData);
+        return to_route('students.index');
+
+    }
+
+    function update($id){
+    $student=Student::findOrFail($id);
+// old data ==>  associative array ==> ['key'=>value]
+// old data ==>  associative array ==> ['key'=>$student]
+    return view('student.update',compact('student'));
+    // return view('student.update',['student'=>$student]);
+
+
+    }
+
+    function edit($id)
+    {
+
+        // dump($_REQUEST);
+            $student=Student::findOrFail($id);
+              $requestedData=request()->except('_token');
+              $student->update($requestedData);
+        return view('student.show', compact('student'));
+
+    }
 }

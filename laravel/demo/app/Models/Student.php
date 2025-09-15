@@ -10,4 +10,11 @@ class Student extends Model
     // protected $table='myStudents';
     // primaryKey ==> id  ==> myId
     // protected $primaryKey="myID";
+
+    protected $fillable=['name','email','gender']; // permited data
+    // protected $guarded=['token']; // forbidden
+    // protected $timestamps=false;
+    public $timestamps = false;
+    // created_at
+    // updated_at
 }

@@ -111,3 +111,19 @@ courses ===> require(con) ===> new obj
 - handle Route
 - create function controller
 - button --> form --> handel method , csrf
+
+
+// insert 
+
+/**
+form ==> select data from user  ===> view 
+==> data ==> strore data base   ===> function 
+
+====> 
+ routes --> 1 (show form)
+ route ---> 2 (inseert selected data)
+
+
+ // update data  (form)
+ 1-display old data
+ 2-update 
