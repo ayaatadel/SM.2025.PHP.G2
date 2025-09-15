@@ -68,3 +68,46 @@ for()
 {
 
 }  ==> end for
+
+
+
+========================> DB ==> handel ==> 
+design pattern ==> single tone ===>  
+
+php ===> connection 
+students ===> require(con)  ==> new obj
+courses ===> require(con) ===> new obj
+
+
+/**
+1- create database
+2- handel cradentials ===> userName , DB_Name , DB_Password
+                            host , DB_Type
+
+
+
+  ============> Migrations (يهاجر)
+  DB ==> Sql 
+  PHP ==> Model   (relation , tables Name)
+  ===> strurcture of tables (migrations) ==>
+
+  =============================>
+  1- route 
+   2- controller(logic===> all functions ) =>https://laravel.com/docs/12.x/controllers#main-content
+   php  artisan make:controller StudntController
+
+   3- model ===> php  artisan make:model Student  ==> https://laravel.com/docs/12.x/eloquent
+
+   /**
+   
+   /// handel any thing else in model
+   model ==> singular  ==> مفرد
+   table ==> plural ==> جمغ
+   /
+
+
+
+// delete
+- handle Route
+- create function controller
+- button --> form --> handel method , csrf
