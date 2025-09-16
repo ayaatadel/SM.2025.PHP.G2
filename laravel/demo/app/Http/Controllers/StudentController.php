@@ -63,9 +63,23 @@ class StudentController extends Controller
     function store()
     {
 
+
+
         // dump($_REQUEST);
         // dump(request()->all());
-        $requestedData=request()->except('_token');
+        $requestedData=request()->validate([
+           'name'=>'required|min:3',
+           'email'=>'unique:students,email',
+           'address'=>'required',
+           'gender'=>'required',
+        ],[
+            // message
+             'name.required'=>'name is required',
+             'name.min'=>'name is must br more than 3 characters',
+             'email.unique'=>'email is already exist',
+             'age.required'=>'age is required',
+             'address.required'=>'address is required',
+        ]);
         // dump($requestedData);
         Student::create($requestedData);
         return to_route('students.index');

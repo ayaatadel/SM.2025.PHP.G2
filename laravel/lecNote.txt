@@ -127,3 +127,13 @@ form ==> select data from user  ===> view
  // update data  (form)
  1-display old data
  2-update 
+ =============================================
+ component  ===> file ==>  you can use in any where  ==> https://laravel.com/docs/12.x/blade#components
+                                                   // name of url     controllerName
+ resource ===>  create routes ===> Route::resource('tracks',TrackController::class);
+
+ ==================> controller  ===> --resource || -r ===> handel all methods signature 
+ php artisan make:controller TrackController -r (--resource)  --model=Track
+
+ migrations  ==> handel structrue of table  ==>https://laravel.com/docs/12.x/migrations
+ validation errors 

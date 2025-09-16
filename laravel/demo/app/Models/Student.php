@@ -11,7 +11,7 @@ class Student extends Model
     // primaryKey ==> id  ==> myId
     // protected $primaryKey="myID";
 
-    protected $fillable=['name','email','gender']; // permited data
+    protected $fillable=['name','email','gender','image','address','age']; // permited data
     // protected $guarded=['token']; // forbidden
     // protected $timestamps=false;
     public $timestamps = false;

@@ -2,3 +2,8 @@
 ===> table tracks ==> id , name , description , image (bonous==>3)
 ==> model ==> Track
 ==> TrackController with all Cruds Opertaion 
+======================================================> Day 3
+handel all validations all data
+================> migrations (track , student ==> resource)
+table ==> courses ==> id , name , grade , description , image 
+----------> model , migration , resource , CRUDS 

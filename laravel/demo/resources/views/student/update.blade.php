@@ -10,6 +10,7 @@
     <title>create Student</title>
 </head>
 <body>
+    <x-navbar/>
     {{-- @dump($student) --}}
 <h1 class="text-info text-center m-5 text-capitalize">Update <span class="text-danger">{{ $student->name }} </span>Profile </h1>
 
@@ -25,12 +26,36 @@
     <input  value="{{ $student->email }}"  name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
-    <label for="exampleInputGender1" class="form-label">Gender </label>
-    <input value="{{ $student->gender }}"   name="gender" type="text" class="form-control" id="exampleInputGender1" >
+    <label for="gender" class="form-label">Gender </label>
+    <br>
+    <label for="male" class="form-label">male</label>
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="female" class="form-label">female</label>
+    <input type="radio" name="gender" id="female" value="female">
+    {{-- <input value="{{ $student->gender }}"   name="gender" type="text" class="form-control" id="exampleInputGender1" > --}}
+  </div>
+
+    <div class="mb-3">
+    <label for="exampleInputimage1" class="form-label">image </label>
+    <input  value="{{ $student->image }}"  name="image" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+    <div class="mb-3">
+    <label for="exampleInputaddress1" class="form-label">address </label>
+    <input  value="{{ $student->address }}"  name="address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+    <div class="mb-3">
+    <label for="exampleInputage1" class="form-label">age </label>
+    <input  value="{{ $student->age }}"  name="age" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
 
 
-  <button type="submit" class="btn btn-primary">Edit</button>
+<div class="d-flex justify-between">
+      <button type="submit" class="btn btn-primary m-3 ">Edit</button>
+<a href="{{ route('students.index') }}">
+  <x-button  class="warning m-3 " name="Back"></x-button>
+
+</a>
+</div>
 </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

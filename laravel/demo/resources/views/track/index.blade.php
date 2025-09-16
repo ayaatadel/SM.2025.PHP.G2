@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>students Data</title>
+    <title>Tracks Data</title>
     <x-bootstrap-css></x-bootstrap-css>
 
 </head>
@@ -14,13 +14,13 @@
 <body>
     <x-navbar></x-navbar>
  <div class="d-flex justify-content-around">
-       <h1 class="text-success text-center m-5  ">All Studenta Data</h1>
-    {{-- @dump($students) --}}
+       <h1 class="text-success text-center m-5  ">All Tracka Data</h1>
+    {{-- @dump($tracks) --}}
 
     <div class="m-5">
-            <a class="text-decoration-none" href="{{ route('students.create' ) }}">
-               {{-- <button class="btn btn-info">Create New Student</button> --}}
-                 <x-button class="info" name="Create New Student"/>
+            <a class="text-decoration-none" href="{{ route('tracks.create' ) }}">
+               {{-- <button class="btn btn-info">Create New track</button> --}}
+                 <x-button class="info" name="Create New track"/>
             </a>
 
     </div>
@@ -32,8 +32,8 @@
 
                 <th>id</th>
                 <th>Name</th>
-                <th>Image</th>
-              <th>Gender</th>
+                <th>Description</th>
+              <th>Img</th>
               <th>Actions</th>
 
         </thead>
@@ -41,29 +41,29 @@
         </tr>
         </thead>
         <tbody>
-@foreach($students as $student)
+@foreach($tracks as $track)
 <tr>
-    <td>{{ $student->id }}</td>
-    <td>{{ $student->name }}</td>
-    <td> <img src="{{ $student->image}}" alt="{{ $student->name}}" srcset="" width="100px" height="100px"> </td>
-    <td>{{ $student->gender }}</td>
+    <td>{{ $track->id }}</td>
+    <td>{{ $track->name }}</td>
+    <td>{{ $track->description}}</td>
+    <td><img src="{{ $track->image }}" alt="{{$track->name}}" srcset="" width="100px" height="100px"></td>
       <td class="p-2 d-flex justify-content-around">
           <div>
-               <a class="text-decoration-none" href="{{ route('students.show',$student->id ) }}">
+               <a class="text-decoration-none" href="{{ route('tracks.show',$track->id ) }}">
                {{-- <button class="btn btn-warning">View</button> --}}
 
                <x-button class="warning" name="View"/>
             </a>
 
           </div>
-               <form action="{{ route('students.destroy',$student->id ) }}" method="post">
+               <form action="{{ route('tracks.destroy',$track->id ) }}" method="post">
                  @method('delete')
                  @csrf
                  <x-button class="danger" name="Delete"></x-button>
                </form>
 <div>
 
-                 <a class="text-decoration-none" href="{{ route('students.update',$student->id ) }}">
+                 <a class="text-decoration-none" href="{{ route('tracks.update',$track->id ) }}">
                <x-button class="info" name="Update"></x-button></a>
 </div>
             </td>

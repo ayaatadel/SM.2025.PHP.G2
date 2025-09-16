@@ -22,6 +22,9 @@
                 <th>Name</th>
                 <th>email</th>
               <th>gender</th>
+              <th>address</th>
+              <th>Image</th>
+              <th>Age</th>
               <th>Actions</th>
 
         </thead>
@@ -35,7 +38,10 @@
     <td>{{ $student->name }}</td>
     <td>{{ $student->email}}</td>
     <td>{{ $student->gender }}</td>
-      <td class="p-2">
+    <td>{{ $student->address }}</td>
+    <td> <img src="{{ $student->image}}" alt="{{ $student->name}}" srcset="" width="100px" height="100px"> </td>
+<td>{{ $student->age }}</td>
+    <td class="p-2">
         <a class="text-decoration-none" href="{{ route('students.index') }}">
                         <button class="btn btn-info">Back</button>
 
