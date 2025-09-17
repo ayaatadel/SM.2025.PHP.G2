@@ -17,8 +17,12 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->enum('gender',['male','female']);
             $table->string('image')->nullable()->default("https://images.pexels.com/photos/35537/child-children-girl-happy.jpg");
-            $table->integer('age')->min(18);
+            $table->integer('age')->min(18)->default(18);
             $table->string('address');
+        // $table->unsignedBigInteger('track_id');
+            // $table->foreign('track_id')->references('id')->on('tracks')->cascadeOnDelete()->cascadeOnUpdate();
+
+        $table->foreignId('track_id')->nullable()->constrained()->onDelete('cascade')->cascadeOnUpdate();
             $table->timestamps();
         });
     }

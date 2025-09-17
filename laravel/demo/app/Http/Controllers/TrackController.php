@@ -14,7 +14,8 @@ class TrackController extends Controller
     public function index()
     {
         //
-        $tracks=Track::all();
+        // $tracks=Track::all();
+        $tracks=Track::paginate(3);
         return view('track.index',compact('tracks'));
     }
 
@@ -68,6 +69,7 @@ class TrackController extends Controller
          * ==>> check $id ==> Data of Track
          * ===> not Exist ==> 404
          */
+        // dd($track);
      return view('track.show',compact('track'));
     }
 

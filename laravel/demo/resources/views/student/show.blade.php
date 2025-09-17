@@ -14,7 +14,7 @@
 
 <body>
     <h1 class="text-info text-center m-5  "> Student Data</h1>
-    {{-- @dump($student) --}}
+    {{-- @dd($student->track) --}}
     <table class="table table-bordered w-75 m-auto p-1 text-center ">
         <thead>
 
@@ -25,6 +25,9 @@
               <th>address</th>
               <th>Image</th>
               <th>Age</th>
+                 @if($student->track_id )
+                <th>Track Name</th>
+                @endif
               <th>Actions</th>
 
         </thead>
@@ -37,10 +40,16 @@
     <td>{{ $student->id }}</td>
     <td>{{ $student->name }}</td>
     <td>{{ $student->email}}</td>
+
     <td>{{ $student->gender }}</td>
     <td>{{ $student->address }}</td>
     <td> <img src="{{ $student->image}}" alt="{{ $student->name}}" srcset="" width="100px" height="100px"> </td>
 <td>{{ $student->age }}</td>
+@if($student->track_id)
+    <td class="text-center" >
+     <a  class="text-danger  text-decoration-none "href="{{ route('tracks.show',$student->track_id) }}">   {{ $student->track->name}}</a>
+    </td>
+    @endif
     <td class="p-2">
         <a class="text-decoration-none" href="{{ route('students.index') }}">
                         <button class="btn btn-info">Back</button>

@@ -74,8 +74,11 @@
 
 
     </table>
+<div class="text-center p-3 w-75 mx-auto my-3">
+    {{ $students->links() }}
 
-<x-footer></x-footer>
+</div>
+    <x-footer></x-footer>
 <x-bootstrap-js></x-bootstrap-js>
 
 </body>

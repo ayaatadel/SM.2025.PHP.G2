@@ -74,6 +74,34 @@
 
     </table>
 
+
+
+    {{-- students in track   array--}}
+{{-- @dd($track->students ) --}}
+
+@if($track->students )
+    <h2 class="text-center text-success my-5">Track : {{ $track->name }} Students</h2>
+    <table class="table table-bordered w-75 m-auto p-1 text-center">
+        <thead>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Age</td>
+        </thead>
+        <tbody>
+            @foreach($track->students as $student)
+
+            <tr>
+                <td>
+                    <a href="{{ route('students.show',$student->id) }}">
+                    {{ $student->name }}</a>
+                </td>
+                <td>{{ $student->email}}</td>
+                <td>{{ $student->age }}</td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+@endif
 <x-footer></x-footer>
 <x-bootstrap-js></x-bootstrap-js>
 

@@ -90,6 +90,15 @@ courses ===> require(con) ===> new obj
   DB ==> Sql 
   PHP ==> Model   (relation , tables Name)
   ===> strurcture of tables (migrations) ==>
+  tables ===> 
+// migrations  ===> structure of tables
+1- create migrations==>php artisan make:migration create_students_table  ==> add table
+1- create migrations==>php artisan make:migration add_phone_to_students_table  ==> add column to table
+
+==========> run migrations ==> php artisan migrate
+==> rollback on step ==>php artisan migrate:rollback
+==> rollback on patch ==>php artisan migrate:rollback --patch=2
+==> rollback on steps ==>php artisan migrate:rollback --steps=2
 
   =============================>
   1- route 
@@ -137,3 +146,73 @@ form ==> select data from user  ===> view
 
  migrations  ==> handel structrue of table  ==>https://laravel.com/docs/12.x/migrations
  validation errors 
+
+ =============================> Day4
+ -- seeder ==> https://laravel.com/docs/12.x/seeding#writing-seeders
+ -- factory ==> https://laravel.com/docs/12.x/eloquent-factories#introduction
+ -- pagination ==> https://laravel.com/docs/12.x/pagination#main-content
+ -- relation
+
+
+ /*
+ ===> create project
+ ===> create db ==> name (cradentials)  ===> set .env
+ ======> table , fake data (factory)
+ ----> factory ===> مصنع===> make fake data
+ ----> seeder ===> يغذي  ==> seed fake data in your database
+
+
+ ========> php artisan make:factory StudentFactory
+
+  'name'=>fake()->name(),
+             'email'=>fake()->unique()->safeEmail(),
+             'gender'=>fake()->randomElements(['male','femail']),
+            //  'image'=>"https://images.pexels.com/photos/35537/child-children-girl-happy.jpg",
+            'image'=>fake()->imageUrl(),
+            'age'=>fake()->numberBetween(19,30),
+            'address'=>fake()->address(),
+            'created_at'=>now(),
+            'updated_at'=>now(),
+
+    ========================> Seed Data in your database
+    php artisan make:seeder StudentSeeder   ==> 
+    =====> run seeder    
+
+    ====================> relation
+    mandatory (must) ===> not mandatory (may)
+    one to one   ==> 
+    --- not mandatory (may) ==> new table (pk1,pk2)
+    --- mandatory (must) ==> any of pk put in second table as fk
+
+    --- (must , may)===> pk->must as fk in may 
+    one to  many   ==>   pk->one as fk in many
+    many to many  ===>  new table (pk1,pk2)
+
+    =============> track students
+    stundent join only on track
+    track can have manu students 
+      1                           1
+    students                    track
+        m                          1
+  one to many ====> (student => many) || (track => one)
+  
+  pk --> track ============> fk in student
+
+
+  ===> foreign key ========> migration 
+
+  /**
+  alter table add column track_id foregin key refrence on id in tracks  ===> 
+ 1- add column in maigration 
+ 2- migrtion add column ==> rollback || refresh ==> migration 
+
+
+
+
+===> one ===> belongs to
+===> many ==> hasMany
+
+/**
+student ===> trackName
+track ==> all students in this track
+

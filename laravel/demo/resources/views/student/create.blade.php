@@ -78,8 +78,22 @@
 @enderror
     <div class="mb-3">
     <label for="exampleInputage1" class="form-label">age </label>
-    <input  name="age" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input  name="age" type="number" class="form-control" id="exampleInputage1" >
   </div>
+
+
+  {{-- choose Your Track --}}
+      {{-- @dd($tracks) --}}
+
+
+  <label for="track" class="form-label">Choose Your Track </label>
+  <select class="form-select" aria-label="Default select example" name='track_id'>
+
+@foreach($tracks as $track)
+<option  value="{{$track->id }}">{{ $track->name }}</option>
+@endforeach
+>
+</select>
 
   <button type="submit" class="btn btn-primary">Add New Student</button>
 

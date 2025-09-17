@@ -7,3 +7,27 @@ handel all validations all data
 ================> migrations (track , student ==> resource)
 table ==> courses ==> id , name , grade , description , image 
 ----------> model , migration , resource , CRUDS 
+
+
+
+==============> Day4
+-------------------> paginamtion , seeder , factory 
+students 
+tracks
+courses
+
+1- handel relation one-many (student, track)
+2- handel realation many-many(track , courses)
+3- handel realation many-many(students , courses)
+ 
+
+track ->  create ==> select courses 
+
+show of track display courses
+
+
+
+courses ==> show ==> all tracks (track name) 
+
+
+students ==> table of courses that students take and grade of each course
