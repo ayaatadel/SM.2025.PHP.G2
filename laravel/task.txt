@@ -31,3 +31,16 @@ courses ==> show ==> all tracks (track name)
 
 
 students ==> table of courses that students take and grade of each course
+
+
+
+==================> Day 5
+===> authentication ==> login , register 
+api ==> atudent , track, course  ===>soft delete  , image
+
+track  show ==> courses Name 
+student show  ==> track Name , courses with grades
+
+
+
+======================
